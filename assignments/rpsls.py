@@ -16,7 +16,7 @@ def name_to_number(name):
     if name == "rock":
         number = 0
     elif name == "Spock":
-        number == 1
+        number = 1
     elif name == "paper":
         number = 2
     elif name == "lizard":
@@ -45,14 +45,22 @@ def rpsls(player_choice):
     print ""
     comp_pick = random.randrange(0,4)
     print "Player chooses " + str(player_choice)
+    # print (name_to_number(player_choice))
     player_number = "The winning player number is: " + str(name_to_number(player_choice))
+    # print player_number
     print "Computer chooses " + str(number_to_name(comp_pick))
     comp_number = "The winning compy number is: " + str(comp_pick)
+    # print comp_number
     result = int(name_to_number(player_choice) - comp_pick) % 5
-    if result >= 3:
+    # print result
+    if result == 4:
+        print "The Computer wins!"
+    elif result == 3:
+        print "The Computer wins!"
+    elif result ==  1:
         print "The player wins!"
-    elif result >= 1:
-            print "The Computer wins!"
+    elif result ==  2:
+        print "The player wins!"
     else:
         print "Player and computer tie!"
 

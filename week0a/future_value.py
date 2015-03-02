@@ -14,7 +14,6 @@ __author__ = 'thijn'
 # 1967.15135729
 
 p = 1000
-years = 7
 # percentage = (p / 100) * 7
 p = float(p)
 for i in range(1,11):
